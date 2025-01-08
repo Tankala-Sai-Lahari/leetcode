@@ -1,5 +1,10 @@
 problem link-https://leetcode.com/problems/shifting-letters-ii/description/?envType=daily-question&envId=2025-01-05
-
+Technique used : Difference array 
+concept:https://www.youtube.com/watch?v=96RG7EBF8LI
+    applicable when dealing with set of queries on large arrays.
+    OPTIMISATION:
+        for every query do the following , A[L]+=x, A[R+1}-=x
+        after processing all the queries take the prefix sum of entire array to get resultant array.
 solution:
 class Solution:
     def shiftingLetters(self, s: str, shifts: list[list[int]]) -> str:
