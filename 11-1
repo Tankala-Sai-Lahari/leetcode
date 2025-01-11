@@ -1,0 +1,12 @@
+link :https://leetcode.com/problems/construct-k-palindrome-strings/description
+
+solution:
+class Solution:
+    def canConstruct(self, s: str, k: int) -> bool:
+        if len(s)<k:
+            return False
+        c=Counter(s)
+        odd=0
+        for cnt in c.values():
+            odd+=cnt%2
+        return odd<=k
